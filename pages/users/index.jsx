@@ -5,7 +5,15 @@ export default function Users({ users }) {
 
   return (
     <div>
-
+      {
+        users.map((ele)=>{
+          return(
+            <div key={ele.id}>
+              {ele.id}. {ele.username}
+            </div>
+          )
+        })
+      }
     </div>
   );
 }
