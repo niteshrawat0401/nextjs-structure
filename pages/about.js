@@ -1,5 +1,10 @@
-
 export default function About() {
-  return (<div>about</div>
-  )
+  return (
+    <>
+      <div>
+          <title>Experiment</title>
+        about
+      </div>
+    </>
+  );
 }

@@ -1,7 +1,9 @@
 // import React, { useEffect, useState } from 'react'
+import { useRouter } from "next/router";
 
 export default function Users({ users }) {
   // const [users, setUsers]= useState([]);
+  const router= useRouter()
 
   return (
     <div>
@@ -9,7 +11,8 @@ export default function Users({ users }) {
         users.map((ele)=>{
           return(
             <div key={ele.id}>
-              {ele.id}. {ele.username}
+              {ele.id}. 
+              <h1 onClick={()=> {router.push(`users/${ele.id}`)}}>{ele.username}</h1>
             </div>
           )
         })
